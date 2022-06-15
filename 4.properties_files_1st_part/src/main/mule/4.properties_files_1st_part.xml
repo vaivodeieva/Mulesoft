@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="properties_files_basics_video31" doc:id="8514f925-998f-4d03-bbc2-40ed3452c8cd" >
+		<http:listener doc:name="HTTP GET" doc:id="c752ba0a-f3fe-4279-9ba7-0bf43808fb7a" config-ref="HTTP_Listener_config" path="${http.path}"/>
+		<logger level="INFO" doc:name="Logger" doc:id="ba06a289-2784-4a47-9bfb-1a5b93bafa27" message="${message}"/>
+		<set-payload value="${message}" doc:name="Set Payload" doc:id="98e20a26-786b-4609-ae6c-a2eb17abbfc1" />
+	</flow>
+</mule>
